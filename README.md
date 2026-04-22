@@ -1,9 +1,8 @@
 # VHDL, GTKWave, and Yosys
 
 Simple AND and OR gate using VHDL.
-```bash
+
 $A' + B' + CD'$
-```
 
 ## Run
 ```bash
