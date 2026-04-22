@@ -1,0 +1,48 @@
+digraph "logic0" {
+rankdir="LR";
+remincross=true;
+
+# INPUT / OUTPUT
+A [ shape=octagon, label="A"];
+B [ shape=octagon, label="B"];
+C [ shape=octagon, label="C"];
+D [ shape=octagon, label="D"];
+E [ shape=octagon, label="E"];
+F [ shape=octagon, label="F"];
+
+# NOT GATES
+nA [ shape=record, label="{{<in> A}|NOT|{<out> Y}}" ];
+nD [ shape=record, label="{{<in> D}|NOT|{<out> Y}}" ];
+
+# AND GATES
+and1 [ shape=record, label="{{<p1> A|<p2> B}|AND|{<out> Y}}" ];
+and2 [ shape=record, label="{{<p1> C|<p2> D}|AND|{<out> Y}}" ];
+and3 [ shape=record, label="{{<p1> A|<p2> E}|AND|{<out> Y}}" ];
+
+# OR GATE
+or1 [ shape=record, label="{{<p1> A|<p2> B|<p3> C}|OR|{<out> Y}}" ];
+
+# CONNECTIONS
+
+# NOT A → AND1
+A -> nA:in;
+nA:out -> and1:p1;
+B -> and1:p2;
+
+# NOT D → AND2
+D -> nD:in;
+nD:out -> and2:p2;
+C -> and2:p1;
+
+# AND3 langsung
+A -> and3:p1;
+E -> and3:p2;
+
+# Masuk OR
+and1:out -> or1:p1;
+and2:out -> or1:p2;
+and3:out -> or1:p3;
+
+# Output
+or1:out -> F;
+}
