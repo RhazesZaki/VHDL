@@ -14,7 +14,9 @@ ghdl -r tb_logic0 - -vcd=wave.vcd
 ```
 
 ## GTKWave
+```bash
 gtkwave wave.vcd
+```
 
 ## Yosys
 ```bash
