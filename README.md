@@ -32,5 +32,5 @@ open logic0.png
 
 ## Output
 ```bash
-![logic0.png](https://github.com/RhazesZaki/VHDL-Signal/blob/d0f55f7e726de454c09f3a825b6423c8503b846d/logic0.png)
+![image alt](https://github.com/RhazesZaki/VHDL-Signal/blob/7d0835effd3aeed86761218f3d19263daed4b452/logic0.png)
 ```
