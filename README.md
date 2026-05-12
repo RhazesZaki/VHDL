@@ -24,6 +24,9 @@ ghdl -r tb_logic0 --vcd=wave.vcd
 gtkwave wave.vcd
 ```
 
+## Output
+![image alt](https://github.com/RhazesZaki/VHDL-Signal/blob/62735bf27c293ef25735002c7f2a1120866424e4/GTKWave%20Graphic.png)
+
 ## Yosys
 ```bash
 dot -Tpng logic0.dot -o logic0.png
